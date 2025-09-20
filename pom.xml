@@ -7,13 +7,31 @@
 	<version>8.2.0</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
-	
+        <build>
+          <plugins>
+	      <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
+            </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+             </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+             </plugin>
+             </plugins>
+        </build>	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://18.182.33.186:9000/</sonar.host.url>
+		<sonar.host.url>http://18.183.110.61:9000/</sonar.host.url>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <maven.compiler.source>1.7</maven.compiler.source>
-                <maven.compiler.target>1.7</maven.compiler.target>
+                <maven.compiler.source>17</maven.compiler.source>
+                <maven.compiler.target>17</maven.compiler.target>
 		
 
 	</properties>
@@ -32,12 +50,12 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexusRepo</id>
-		    <url>http://43.206.159.111:8081/repository/sample-snapshots/</url>
+		    <url>http://35.78.233.156:8081/repository/sample-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>nexusRepo</id>
-		    <url>http://43.206.159.111:8081/repository/sample-releases/</url>
+		    <url>http://35.78.233.156:8081/repository/sample-releases/</url>
 		</repository>
   	</distributionManagement>
 	
